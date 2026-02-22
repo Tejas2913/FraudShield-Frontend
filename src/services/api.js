@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://fraudshield-backend-5.onrender.com',
+  baseURL: 'https://fraudshield-backend-6.onrender.com',
 })
 
 // Attach JWT token to every request automatically
