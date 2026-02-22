@@ -1,16 +1,61 @@
-# React + Vite
+================================================================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# FraudShield AI – Frontend
 
-Currently, two official plugins are available:
+The frontend is a React-based user interface that allows users to register, log in, and analyze messages using the deployed ML backend.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Live Application
+https://fraud-shield-frontend-w549.vercel.app
 
-## React Compiler
+## Features
+- User Signup & Login
+- JWT token storage
+- Protected routes
+- Scam message analysis interface
+- Responsive design
+- Production deployment via Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- React
+- Vite
+- Axios
+- React Router
+- Tailwind CSS (if applicable)
+- Vercel (Deployment)
 
-## Expanding the ESLint configuration
+## Project Structure
+```
+src/
+├── components/
+├── pages/
+├── services/
+│   └── api.js
+├── context/
+├── App.jsx
+├── main.jsx
+vercel.json
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## API Integration
+### Backend Base URL:
+- https://fraudshield-backend-6.onrender.com
+
+Axios automatically attaches JWT token from localStorage.
+
+## Local Development
+- npm install
+- npm run dev
+
+### Frontend runs at:
+- http://localhost:5173
+
+## Production Configuration
+- vercel.json enables SPA routing:
+```
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
+```
+
