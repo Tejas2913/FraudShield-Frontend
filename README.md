@@ -1,5 +1,3 @@
-================================================================================
-
 # FraudShield AI – Frontend
 
 The frontend is a React-based user interface that allows users to register, log in, and analyze messages using the deployed ML backend.
